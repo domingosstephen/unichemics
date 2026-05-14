@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "./ContactForm";
+import { Mail, Phone, Clock, Truck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Us — Get a Quote",
@@ -34,13 +35,13 @@ export default function ContactPage() {
               <h2 className="text-xl font-bold mb-6">Contact Information</h2>
               <ul className="space-y-6">
                 {[
-                  { icon: "📧", title: "Email", text: "sales@globalchemsupply.com" },
-                  { icon: "📞", title: "Phone", text: "+1 (555) 000-0000" },
-                  { icon: "🕐", title: "Business Hours", text: "Monday — Friday: 8:00 AM — 6:00 PM (EST)\nEmergency support available 24/7" },
-                  { icon: "🚚", title: "Shipping", text: "FOB, CIF, CFR, and DDP terms available.\nWe ship to 50+ countries worldwide." },
+                  { icon: <Mail className="w-5 h-5 text-blue-600" />, title: "Email", text: "sales@globalchemsupply.com" },
+                  { icon: <Phone className="w-5 h-5 text-blue-600" />, title: "Phone", text: "+1 (555) 000-0000" },
+                  { icon: <Clock className="w-5 h-5 text-blue-600" />, title: "Business Hours", text: "Monday — Friday: 8:00 AM — 6:00 PM (EST)\nEmergency support available 24/7" },
+                  { icon: <Truck className="w-5 h-5 text-blue-600" />, title: "Shipping", text: "FOB, CIF, CFR, and DDP terms available.\nWe ship to 50+ countries worldwide." },
                 ].map((item) => (
                   <li key={item.title} className="flex gap-4">
-                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-xl shrink-0">{item.icon}</div>
+                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">{item.icon}</div>
                     <div>
                       <h4 className="font-bold text-sm">{item.title}</h4>
                       <p className="text-sm text-slate-500 whitespace-pre-line">{item.text}</p>

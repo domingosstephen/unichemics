@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Plus } from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -19,7 +20,7 @@ export default function FAQ({ items, defaultOpen = 0 }: { items: FAQItem[]; defa
             onClick={() => setOpenIndex(openIndex === i ? null : i)}
           >
             {item.question}
-            <span className={`text-blue-600 text-lg transition-transform ${openIndex === i ? "rotate-45" : ""}`}>+</span>
+            <Plus className={`w-5 h-5 text-blue-600 transition-transform shrink-0 ${openIndex === i ? "rotate-45" : ""}`} />
           </button>
           {openIndex === i && (
             <div className="px-5 pb-4">

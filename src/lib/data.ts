@@ -21,16 +21,16 @@ export interface Category {
 }
 
 export const categories: Category[] = [
-  { id: "industrial-chemicals", name: "Industrial Chemicals", icon: "🏭", desc: "Core industrial raw materials including acids, bases, solvents, and intermediates for manufacturing processes.", image: "/images/industrial/hydrochloric-acid.webp" },
-  { id: "agricultural-chemicals", name: "Agricultural & Fertilizer Chemicals", icon: "🌾", desc: "Fertilizers, herbicides, and crop protection chemicals for modern agriculture and soil management.", image: "/images/agricultural/urea.webp" },
-  { id: "food-feed-additives", name: "Food & Feed Additives", icon: "🍽️", desc: "Preservatives, thickeners, sweeteners, acidulants, and nutritional supplements for food and animal feed.", image: "/images/food-feed/citric-acid.webp" },
-  { id: "water-treatment", name: "Water Treatment Chemicals", icon: "💧", desc: "Disinfectants, coagulants, flocculants, and corrosion inhibitors for water and wastewater treatment.", image: "/images/water-treatment/calcium-hypochlorite.jpg" },
-  { id: "mining-chemicals", name: "Mining & Mineral Processing", icon: "⛏️", desc: "Flotation reagents, extraction chemicals, and processing aids for gold, copper, zinc, and base metal mining.", image: "/images/mining/activated-carbon.jpg" },
-  { id: "pharma-chemicals", name: "Pharmaceutical & Lab Chemicals", icon: "💊", desc: "High-purity chemicals, excipients, and active ingredients for pharmaceutical and laboratory applications.", image: "/images/pharma/ethanol.webp" },
-  { id: "inorganic-chemicals", name: "Inorganic Chemicals & Metals", icon: "⚗️", desc: "Metal compounds, oxides, and inorganic salts for specialized industrial and technology applications.", image: "/images/inorganic/copper-oxide.webp" },
-  { id: "solvents-glycols", name: "Solvents & Glycols", icon: "🧪", desc: "Organic solvents, glycol ethers, and specialty fluids for coatings, cleaning, and chemical processing.", image: "/images/solvents/butanol.webp" },
-  { id: "paper-pulp-textile", name: "Paper, Pulp & Textile Chemicals", icon: "📄", desc: "Sizing agents, coating chemicals, and processing aids for paper, pulp, and textile manufacturing.", image: "/images/food-feed/methyl-cellulose.webp" },
-  { id: "rubber-leather-specialty", name: "Rubber, Leather & Specialty", icon: "🔧", desc: "Processing aids, tanning agents, and specialty chemicals for rubber, leather, and niche industrial applications.", image: "/images/rubber-specialty/oleic-acid.webp" },
+  { id: "industrial-chemicals", name: "Industrial Chemicals", icon: "Factory", desc: "Core industrial raw materials including acids, bases, solvents, and intermediates for manufacturing processes.", image: "/images/industrial/hydrochloric-acid.webp" },
+  { id: "agricultural-chemicals", name: "Agricultural & Fertilizer Chemicals", icon: "Wheat", desc: "Fertilizers, herbicides, and crop protection chemicals for modern agriculture and soil management.", image: "/images/agricultural/urea.webp" },
+  { id: "food-feed-additives", name: "Food & Feed Additives", icon: "UtensilsCrossed", desc: "Preservatives, thickeners, sweeteners, acidulants, and nutritional supplements for food and animal feed.", image: "/images/food-feed/citric-acid.webp" },
+  { id: "water-treatment", name: "Water Treatment Chemicals", icon: "Droplets", desc: "Disinfectants, coagulants, flocculants, and corrosion inhibitors for water and wastewater treatment.", image: "/images/water-treatment/calcium-hypochlorite.jpg" },
+  { id: "mining-chemicals", name: "Mining & Mineral Processing", icon: "Pickaxe", desc: "Flotation reagents, extraction chemicals, and processing aids for gold, copper, zinc, and base metal mining.", image: "/images/mining/activated-carbon.jpg" },
+  { id: "pharma-chemicals", name: "Pharmaceutical & Lab Chemicals", icon: "Pill", desc: "High-purity chemicals, excipients, and active ingredients for pharmaceutical and laboratory applications.", image: "/images/pharma/ethanol.webp" },
+  { id: "inorganic-chemicals", name: "Inorganic Chemicals & Metals", icon: "FlaskConical", desc: "Metal compounds, oxides, and inorganic salts for specialized industrial and technology applications.", image: "/images/inorganic/copper-oxide.webp" },
+  { id: "solvents-glycols", name: "Solvents & Glycols", icon: "TestTubes", desc: "Organic solvents, glycol ethers, and specialty fluids for coatings, cleaning, and chemical processing.", image: "/images/solvents/butanol.webp" },
+  { id: "paper-pulp-textile", name: "Paper, Pulp & Textile Chemicals", icon: "FileText", desc: "Sizing agents, coating chemicals, and processing aids for paper, pulp, and textile manufacturing.", image: "/images/food-feed/methyl-cellulose.webp" },
+  { id: "rubber-leather-specialty", name: "Rubber, Leather & Specialty", icon: "Wrench", desc: "Processing aids, tanning agents, and specialty chemicals for rubber, leather, and niche industrial applications.", image: "/images/rubber-specialty/oleic-acid.webp" },
 ];
 
 export const products: Product[] = [

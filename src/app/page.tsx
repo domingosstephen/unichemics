@@ -5,6 +5,7 @@ import ProductCard from "@/components/ProductCard";
 import SearchBar from "@/components/SearchBar";
 import CTABanner from "@/components/CTABanner";
 import FAQ from "@/components/FAQ";
+import { Microscope, Globe, DollarSign, Handshake, Sprout, Factory, Pickaxe, Droplets, Pill, Wrench } from "lucide-react";
 
 const featuredSlugs = ["hydrochloric-acid", "citric-acid", "urea", "calcium-hypochlorite", "sodium-cyanide", "ascorbic-acid", "caustic-soda-flakes", "activated-carbon"];
 const featuredProducts = products.filter((p) => featuredSlugs.includes(p.slug));
@@ -17,13 +18,22 @@ const faqItems = [
   { question: "Can you supply food-grade and pharmaceutical-grade chemicals?", answer: "Absolutely. We supply multiple purity grades including technical, food-grade (FCC), pharmaceutical-grade (USP/EP), and reagent-grade (ACS). Each product page specifies available grades." },
 ];
 
+const industryIcons: Record<string, React.ReactNode> = {
+  Agriculture: <Sprout className="w-8 h-8" />,
+  "Food & Beverage": <Factory className="w-8 h-8" />,
+  Mining: <Pickaxe className="w-8 h-8" />,
+  "Water Treatment": <Droplets className="w-8 h-8" />,
+  Pharmaceutical: <Pill className="w-8 h-8" />,
+  Manufacturing: <Wrench className="w-8 h-8" />,
+};
+
 const industries = [
-  { icon: "🌱", name: "Agriculture", desc: "Fertilizers, crop protection & soil amendments", href: "/industries#agriculture" },
-  { icon: "🏭", name: "Food & Beverage", desc: "Additives, preservatives & processing aids", href: "/industries#food" },
-  { icon: "⛏️", name: "Mining", desc: "Extraction, flotation & processing chemicals", href: "/industries#mining" },
-  { icon: "💧", name: "Water Treatment", desc: "Purification, disinfection & corrosion control", href: "/industries#water" },
-  { icon: "💊", name: "Pharmaceutical", desc: "APIs, excipients & lab-grade reagents", href: "/industries#pharma" },
-  { icon: "🔧", name: "Manufacturing", desc: "Solvents, resins, surfactants & intermediates", href: "/industries#manufacturing" },
+  { name: "Agriculture", desc: "Fertilizers, crop protection & soil amendments", href: "/industries#agriculture" },
+  { name: "Food & Beverage", desc: "Additives, preservatives & processing aids", href: "/industries#food" },
+  { name: "Mining", desc: "Extraction, flotation & processing chemicals", href: "/industries#mining" },
+  { name: "Water Treatment", desc: "Purification, disinfection & corrosion control", href: "/industries#water" },
+  { name: "Pharmaceutical", desc: "APIs, excipients & lab-grade reagents", href: "/industries#pharma" },
+  { name: "Manufacturing", desc: "Solvents, resins, surfactants & intermediates", href: "/industries#manufacturing" },
 ];
 
 export default function Home() {
@@ -149,13 +159,13 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: "🔬", title: "Quality Assured", desc: "Every batch tested and certified. We supply technical, food, pharma, and reagent grades with full CoA and SDS documentation." },
-              { icon: "🌍", title: "Global Distribution", desc: "Strategic hubs across Europe, Africa, and the Americas ensure fast delivery worldwide. FCL or LCL — we handle logistics." },
-              { icon: "💰", title: "Competitive Pricing", desc: "Direct manufacturer relationships and bulk purchasing power mean the best prices without compromising quality." },
-              { icon: "🤝", title: "Dedicated Support", desc: "Our technical sales team provides product recommendations, regulatory guidance, and customized supply agreements." },
+              { icon: <Microscope className="w-7 h-7 text-blue-600" />, title: "Quality Assured", desc: "Every batch tested and certified. We supply technical, food, pharma, and reagent grades with full CoA and SDS documentation." },
+              { icon: <Globe className="w-7 h-7 text-blue-600" />, title: "Global Distribution", desc: "Strategic hubs across Europe, Africa, and the Americas ensure fast delivery worldwide. FCL or LCL — we handle logistics." },
+              { icon: <DollarSign className="w-7 h-7 text-blue-600" />, title: "Competitive Pricing", desc: "Direct manufacturer relationships and bulk purchasing power mean the best prices without compromising quality." },
+              { icon: <Handshake className="w-7 h-7 text-blue-600" />, title: "Dedicated Support", desc: "Our technical sales team provides product recommendations, regulatory guidance, and customized supply agreements." },
             ].map((f) => (
               <div key={f.title} className="text-center p-8 rounded-xl bg-slate-50 hover:bg-blue-50 transition-colors">
-                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center text-2xl mx-auto mb-5">{f.icon}</div>
+                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">{f.icon}</div>
                 <h3 className="font-bold mb-2">{f.title}</h3>
                 <p className="text-sm text-slate-500">{f.desc}</p>
               </div>
@@ -174,7 +184,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
             {industries.map((ind) => (
               <Link key={ind.name} href={ind.href} className="bg-slate-900 text-white p-6 rounded-xl text-center hover:bg-slate-700 transition-all hover:-translate-y-1">
-                <div className="text-3xl mb-3">{ind.icon}</div>
+                <div className="flex justify-center mb-3">{industryIcons[ind.name]}</div>
                 <h3 className="font-semibold text-sm mb-1">{ind.name}</h3>
                 <p className="text-[11px] text-slate-400">{ind.desc}</p>
               </Link>
