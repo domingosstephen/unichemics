@@ -5,7 +5,7 @@ import { Mail, Phone, Clock, Truck, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Us — Get a Quote",
-  description: "Request a quote for bulk chemical supply. Contact Unichemics for pricing, product availability, and technical support. Response within 24 hours.",
+  description: "Request a quote for bulk chemical supply. Contact SociedadeTeoflorChemi for pricing, product availability, and technical support. Response within 24 hours.",
   alternates: { canonical: "/contact" },
 };
 
@@ -35,7 +35,7 @@ export default function ContactPage() {
               <h2 className="text-xl font-bold mb-6">Contact Information</h2>
               <ul className="space-y-6">
                 {[
-                  { icon: <Mail className="w-5 h-5 text-blue-600" />, title: "Email", text: "sales@unichemics.com" },
+                  { icon: <Mail className="w-5 h-5 text-blue-600" />, title: "Email", text: "sales@sociedadeteoflorchemi.com" },
                   { icon: <Phone className="w-5 h-5 text-blue-600" />, title: "Phone", text: "+34 631 390 443" },
                   { icon: <Clock className="w-5 h-5 text-blue-600" />, title: "Business Hours", text: "Monday — Friday: 8:00 AM — 6:00 PM (EST)\nEmergency support available 24/7" },
                   { icon: <Truck className="w-5 h-5 text-blue-600" />, title: "Shipping", text: "FOB, CIF, CFR, and DDP terms available.\nWe ship to 50+ countries worldwide." },

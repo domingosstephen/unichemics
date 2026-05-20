@@ -41,15 +41,15 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     "@type": "Product",
     name: product.name,
     description: product.desc,
-    image: `https://unichemics.com${product.image}`,
+    image: `https://sociedadeteoflorchemi.com${product.image}`,
     sku: product.cas,
-    brand: { "@type": "Brand", name: "Unichemics" },
+    brand: { "@type": "Brand", name: "SociedadeTeoflorChemi" },
     category: cat.name,
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
       priceCurrency: "USD",
-      seller: { "@type": "Organization", name: "Unichemics" },
+      seller: { "@type": "Organization", name: "SociedadeTeoflorChemi" },
     },
     additionalProperty: [
       { "@type": "PropertyValue", name: "CAS Number", value: product.cas },
@@ -63,9 +63,9 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://unichemics.com/" },
-      { "@type": "ListItem", position: 2, name: cat.name, item: `https://unichemics.com/category/${cat.id}` },
-      { "@type": "ListItem", position: 3, name: product.name, item: `https://unichemics.com/products/${product.slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://sociedadeteoflorchemi.com/" },
+      { "@type": "ListItem", position: 2, name: cat.name, item: `https://sociedadeteoflorchemi.com/category/${cat.id}` },
+      { "@type": "ListItem", position: 3, name: product.name, item: `https://sociedadeteoflorchemi.com/products/${product.slug}` },
     ],
   };
 

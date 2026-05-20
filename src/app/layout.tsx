@@ -7,16 +7,16 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://unichemics.com"),
+  metadataBase: new URL("https://sociedadeteoflorchemi.com"),
   title: {
-    template: "%s | Unichemics",
-    default: "Unichemics — Industrial, Agricultural & Specialty Chemical Supplier",
+    template: "%s | SociedadeTeoflorChemi",
+    default: "SociedadeTeoflorChemi — Industrial, Agricultural & Specialty Chemical Supplier",
   },
   description: "Trusted global supplier of 100+ industrial, agricultural, food-grade, mining, and specialty chemicals. Request a quote for bulk chemical supply with worldwide delivery.",
   keywords: ["chemical supplier", "industrial chemicals", "agricultural chemicals", "food additives", "mining chemicals", "water treatment", "bulk chemicals"],
   openGraph: {
     type: "website",
-    siteName: "Unichemics",
+    siteName: "SociedadeTeoflorChemi",
   },
   robots: { index: true, follow: true },
 };
