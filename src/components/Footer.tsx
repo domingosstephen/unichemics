@@ -9,7 +9,9 @@ export default function Footer() {
             <div className="text-xl font-extrabold text-white mb-3">
               Global<span className="text-blue-400">Chem</span> Supply
             </div>
-            <p className="text-sm leading-relaxed">Your trusted partner for industrial, agricultural, and specialty chemical supply. Serving manufacturers, processors, and distributors across 50+ countries.</p>
+            <p className="text-sm leading-relaxed mb-4">Your trusted partner for industrial, agricultural, and specialty chemical supply. Serving manufacturers, processors, and distributors across 50+ countries.</p>
+            <p className="text-sm leading-relaxed">Poligon Industrial Mas Xirgu<br />Carrer Can Pau Birol, 101<br />17005 Girona, Spain</p>
+            <p className="text-sm mt-2">Tel: <a href="tel:+34631390443" className="hover:text-blue-400 transition-colors">+34 631 390 443</a></p>
           </div>
           <div>
             <h4 className="text-white font-bold mb-4">Product Categories</h4>

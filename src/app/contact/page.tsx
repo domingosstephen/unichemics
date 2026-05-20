@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ContactForm from "./ContactForm";
-import { Mail, Phone, Clock, Truck } from "lucide-react";
+import { Mail, Phone, Clock, Truck, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Us — Get a Quote",
@@ -36,9 +36,12 @@ export default function ContactPage() {
               <ul className="space-y-6">
                 {[
                   { icon: <Mail className="w-5 h-5 text-blue-600" />, title: "Email", text: "sales@globalchemsupply.com" },
-                  { icon: <Phone className="w-5 h-5 text-blue-600" />, title: "Phone", text: "+1 (555) 000-0000" },
+                  { icon: <Phone className="w-5 h-5 text-blue-600" />, title: "Phone", text: "+34 631 390 443" },
                   { icon: <Clock className="w-5 h-5 text-blue-600" />, title: "Business Hours", text: "Monday — Friday: 8:00 AM — 6:00 PM (EST)\nEmergency support available 24/7" },
                   { icon: <Truck className="w-5 h-5 text-blue-600" />, title: "Shipping", text: "FOB, CIF, CFR, and DDP terms available.\nWe ship to 50+ countries worldwide." },
+                  { icon: <MapPin className="w-5 h-5 text-blue-600" />, title: "Address", text: "Poligon Industrial Mas Xirgu
+Carrer Can Pau Birol, 101
+17005 Girona, Spain" },
                 ].map((item) => (
                   <li key={item.title} className="flex gap-4">
                     <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">{item.icon}</div>
