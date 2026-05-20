@@ -119,13 +119,13 @@ export default function Home() {
               const count = products.filter((p) => p.category === cat.id).length;
               return (
                 <Link key={cat.id} href={`/category/${cat.id}`} className="group block bg-white border border-gray-200 rounded-xl overflow-hidden transition-all hover:-translate-y-1 hover:shadow-lg hover:border-blue-600">
+                  <div className="p-5 pb-3">
+                    <h3 className="font-bold text-base mb-1">{cat.name}</h3>
+                    <p className="text-xs text-slate-500 mb-2">{cat.desc}</p>
+                    <span className="text-xs text-blue-600 font-semibold">{count} Products →</span>
+                  </div>
                   <div className="relative h-48">
                     <Image src={cat.image} alt={cat.name} fill className="object-cover" sizes="(max-width: 768px) 100vw, 25vw" />
-                  </div>
-                  <div className="p-5">
-                    <h3 className="font-bold text-base mb-1">{cat.name}</h3>
-                    <p className="text-xs text-slate-500 mb-3">{cat.desc}</p>
-                    <span className="text-xs text-blue-600 font-semibold">{count} Products →</span>
                   </div>
                 </Link>
               );

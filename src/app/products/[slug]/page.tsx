@@ -98,13 +98,13 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
       {/* Product Detail */}
       <section className="max-w-7xl mx-auto px-6 pb-20">
+        <h1 className="text-3xl font-extrabold mb-2">{product.name}</h1>
+        <p className="text-slate-500 mb-6">CAS Number: {product.cas} &nbsp;|&nbsp; Formula: {product.formula}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="relative h-80 md:h-[420px] bg-slate-50 rounded-xl overflow-hidden">
             <Image src={product.image} alt={`${product.name} — CAS ${product.cas}`} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
           </div>
           <div>
-            <h1 className="text-3xl font-extrabold mb-2">{product.name}</h1>
-            <p className="text-slate-500 mb-6">CAS Number: {product.cas} &nbsp;|&nbsp; Formula: {product.formula}</p>
             <p className="text-slate-700 leading-relaxed mb-8">{product.desc}</p>
 
             <h2 className="font-bold mb-3">Specifications</h2>
