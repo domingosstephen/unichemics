@@ -46,9 +46,9 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: "GlobalChem Supply",
+            name: "Unichemics",
             description: "Trusted global supplier of industrial, agricultural, food-grade, mining, pharmaceutical, and specialty chemicals.",
-            url: "https://globalchemsupply.com",
+            url: "https://unichemics.com",
           }),
         }}
       />
@@ -154,7 +154,7 @@ export default function Home() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
-            <p className="text-xs uppercase tracking-widest text-blue-600 font-bold mb-2">Why GlobalChem Supply</p>
+            <p className="text-xs uppercase tracking-widest text-blue-600 font-bold mb-2">Why Unichemics</p>
             <h2 className="text-3xl font-extrabold mb-3">Built for Reliability at Scale</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

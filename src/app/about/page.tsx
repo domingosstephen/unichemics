@@ -5,7 +5,7 @@ import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
   title: "About Us — Trusted Chemical Supplier",
-  description: "Learn about GlobalChem Supply — a global chemical distribution company delivering quality-assured industrial, agricultural, and specialty chemicals to 50+ countries.",
+  description: "Learn about Unichemics — a global chemical distribution company delivering quality-assured industrial, agricultural, and specialty chemicals to 50+ countries.",
   alternates: { canonical: "/about" },
 };
 
@@ -27,7 +27,7 @@ export default function AboutPage() {
             <Link href="/" className="text-blue-400 hover:underline">Home</Link>
             <span className="mx-2">›</span> About Us
           </nav>
-          <h1 className="text-3xl md:text-4xl font-extrabold mb-3">About GlobalChem Supply</h1>
+          <h1 className="text-3xl md:text-4xl font-extrabold mb-3">About Unichemics</h1>
           <p className="text-slate-400 max-w-xl">Bridging the gap between chemical manufacturers and the industries that depend on them — with quality, reliability, and technical expertise at every step.</p>
         </div>
       </section>
@@ -38,7 +38,7 @@ export default function AboutPage() {
             <div>
               <p className="text-xs uppercase tracking-widest text-blue-600 font-bold mb-2">Our Story</p>
               <h2 className="text-3xl font-extrabold mb-6">From Local Expertise to Global Reach</h2>
-              <p className="text-slate-600 mb-4">GlobalChem Supply was founded with a clear mission: make high-quality chemical sourcing simple, transparent, and reliable for businesses of every size. What started as a specialized supplier serving local manufacturers has grown into a comprehensive chemical distribution operation spanning multiple continents.</p>
+              <p className="text-slate-600 mb-4">Unichemics was founded with a clear mission: make high-quality chemical sourcing simple, transparent, and reliable for businesses of every size. What started as a specialized supplier serving local manufacturers has grown into a comprehensive chemical distribution operation spanning multiple continents.</p>
               <p className="text-slate-600 mb-4">Today, we maintain direct relationships with certified manufacturers across Asia, Europe, and the Middle East — enabling us to offer competitive pricing on over 100 products without compromising on quality assurance or supply chain integrity.</p>
               <p className="text-slate-600">Our team combines deep chemical industry knowledge with modern supply chain management, providing clients with not just products, but genuine partnership in their procurement operations.</p>
             </div>

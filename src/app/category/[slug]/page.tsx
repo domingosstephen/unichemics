@@ -30,7 +30,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: `${cat.name} — GlobalChem Supply`,
+    name: `${cat.name} — Unichemics`,
     description: cat.desc,
     mainEntity: {
       "@type": "ItemList",
@@ -39,7 +39,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
         "@type": "ListItem",
         position: i + 1,
         name: p.name,
-        url: `https://globalchemsupply.com/products/${p.slug}`,
+        url: `https://unichemics.com/products/${p.slug}`,
       })),
     },
   };
