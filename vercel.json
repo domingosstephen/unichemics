@@ -1,0 +1,3 @@
+{
+  "buildCommand": "NODE_OPTIONS='--stack-trace-limit=100' npm run build"
+}
