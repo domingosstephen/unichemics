@@ -5,7 +5,7 @@ import { Mail, Phone, Clock, Truck, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Us — Get a Quote",
-  description: "Request a quote for bulk chemical supply. Contact SociedadeTeoflorChemi for pricing, product availability, and technical support. Response within 24 hours.",
+  description: "Request a quote for bulk chemical supply. Contact Sociedade Theoflor Chemi for pricing, product availability, and technical support. Response within 24 hours.",
   alternates: { canonical: "/contact" },
 };
 
@@ -34,21 +34,41 @@ export default function ContactPage() {
             <div>
               <h2 className="text-xl font-bold mb-6">Contact Information</h2>
               <ul className="space-y-6">
-                {[
-                  { icon: <Mail className="w-5 h-5 text-blue-600" />, title: "Email", text: "sales@sociedadeteoflorchemi.com" },
-                  { icon: <Phone className="w-5 h-5 text-blue-600" />, title: "Phone", text: "+34 631 390 443" },
-                  { icon: <Clock className="w-5 h-5 text-blue-600" />, title: "Business Hours", text: "Monday — Friday: 8:00 AM — 6:00 PM (EST)\nEmergency support available 24/7" },
-                  { icon: <Truck className="w-5 h-5 text-blue-600" />, title: "Shipping", text: "FOB, CIF, CFR, and DDP terms available.\nWe ship to 50+ countries worldwide." },
-                  { icon: <MapPin className="w-5 h-5 text-blue-600" />, title: "Address", text: "Poligon Industrial Mas Xirgu\nCarrer Can Pau Birol, 101\n17005 Girona, Spain" },
-                ].map((item) => (
-                  <li key={item.title} className="flex gap-4">
-                    <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0">{item.icon}</div>
-                    <div>
-                      <h4 className="font-bold text-sm">{item.title}</h4>
-                      <p className="text-sm text-slate-500 whitespace-pre-line">{item.text}</p>
-                    </div>
-                  </li>
-                ))}
+                <li className="flex gap-4">
+                  <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0"><Mail className="w-5 h-5 text-blue-600" /></div>
+                  <div>
+                    <h4 className="font-bold text-sm">Email</h4>
+                    <a href="mailto:sales@sociedadeteoflorchemi.com" className="text-sm text-blue-600 hover:underline">sales@sociedadeteoflorchemi.com</a>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0"><Phone className="w-5 h-5 text-blue-600" /></div>
+                  <div>
+                    <h4 className="font-bold text-sm">WhatsApp / Phone</h4>
+                    <a href="https://wa.me/34631390443" target="_blank" rel="noopener noreferrer" className="text-sm text-blue-600 hover:underline">+34 631 390 443</a>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0"><Clock className="w-5 h-5 text-blue-600" /></div>
+                  <div>
+                    <h4 className="font-bold text-sm">Business Hours</h4>
+                    <p className="text-sm text-slate-500 whitespace-pre-line">{"Monday — Friday: 8:00 AM — 6:00 PM (EST)\nEmergency support available 24/7"}</p>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0"><Truck className="w-5 h-5 text-blue-600" /></div>
+                  <div>
+                    <h4 className="font-bold text-sm">Shipping</h4>
+                    <p className="text-sm text-slate-500 whitespace-pre-line">{"FOB, CIF, CFR, and DDP terms available.\nWe ship to 50+ countries worldwide."}</p>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0"><MapPin className="w-5 h-5 text-blue-600" /></div>
+                  <div>
+                    <h4 className="font-bold text-sm">Address</h4>
+                    <p className="text-sm text-slate-500 whitespace-pre-line">{"Poligon Industrial Mas Xirgu\nCarrer Can Pau Birol, 101\n17005 Girona, Spain"}</p>
+                  </div>
+                </li>
               </ul>
 
               <div className="mt-10 p-6 bg-blue-50 rounded-xl">

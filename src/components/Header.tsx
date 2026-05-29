@@ -16,14 +16,14 @@ export default function Header() {
       <div className="bg-slate-900 text-slate-400 text-xs py-1.5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
           <span className="hidden sm:inline">Poligon Industrial Mas Xirgu, Carrer Can Pau Birol, 101, 17005 Girona</span>
-          <span>+34 631 390 443 &nbsp;|&nbsp; sales@sociedadeteoflorchemi.com</span>
+          <span><a href="https://wa.me/34631390443" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">+34 631 390 443</a> &nbsp;|&nbsp; <a href="mailto:sales@sociedadeteoflorchemi.com" className="hover:text-blue-400 transition-colors">sales@sociedadeteoflorchemi.com</a></span>
         </div>
       </div>
 
       {/* Main nav */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
         <Link href="/" className="text-lg sm:text-xl font-extrabold text-slate-900">
-          Sociedade<span className="text-blue-600">TeoflorChemi</span>
+          Sociedade <span className="text-blue-600">Theoflor</span> Chemi
         </Link>
 
         {/* Desktop nav */}

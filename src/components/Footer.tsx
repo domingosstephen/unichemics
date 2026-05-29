@@ -7,11 +7,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
             <div className="text-xl font-extrabold text-white mb-3">
-              Sociedade<span className="text-blue-400">TeoflorChemi</span>
+              Sociedade <span className="text-blue-400">Theoflor</span> Chemi
             </div>
             <p className="text-sm leading-relaxed mb-4">Your trusted partner for industrial, agricultural, and specialty chemical supply. Serving manufacturers, processors, and distributors across 50+ countries.</p>
             <p className="text-sm leading-relaxed">Poligon Industrial Mas Xirgu<br />Carrer Can Pau Birol, 101<br />17005 Girona, Spain</p>
-            <p className="text-sm mt-2">Tel: <a href="tel:+34631390443" className="hover:text-blue-400 transition-colors">+34 631 390 443</a></p>
+            <p className="text-sm mt-2">Tel: <a href="https://wa.me/34631390443" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">+34 631 390 443</a></p>
           </div>
           <div>
             <h4 className="text-white font-bold mb-4">Product Categories</h4>
@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-slate-800 py-5 flex flex-wrap justify-between items-center gap-3 text-xs">
-          <span>&copy; 2026 SociedadeTeoflorChemi. All rights reserved.</span>
+          <span>&copy; 2026 Sociedade Theoflor Chemi. All rights reserved.</span>
           <span>Committed to quality, safety, and global chemical supply excellence.</span>
         </div>
       </div>
