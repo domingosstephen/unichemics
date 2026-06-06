@@ -1,0 +1,16 @@
+{
+  "engine": { "enabled": true, "articlesPerRun": 1 },
+  "approval": { "requireApproval": false },
+  "categories": {
+    "chemical-guide": { "enabled": true, "maxPerWeek": 2, "priority": "high" },
+    "industry-application": { "enabled": true, "maxPerWeek": 1, "priority": "high" },
+    "safety-handling": { "enabled": true, "maxPerWeek": 1, "priority": "medium" },
+    "market-insight": { "enabled": true, "maxPerWeek": 1, "priority": "medium" },
+    "comparison": { "enabled": true, "maxPerWeek": 1, "priority": "high" },
+    "how-to": { "enabled": true, "maxPerWeek": 1, "priority": "medium" }
+  },
+  "research": {
+    "targetRegions": ["Africa", "South America", "Middle East", "Europe", "Southeast Asia"],
+    "competitors": ["sigma-aldrich.com", "alibaba.com", "chemicalbook.com", "echemi.com"]
+  }
+}
