@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div>
             <div className="text-xl font-extrabold text-white mb-3">
-              Sociedade <span className="text-blue-400">Teoflor</span> Chemi
+              Sociedade <span className="text-blue-400">Theoflor</span> Chemi
             </div>
             <p className="text-sm leading-relaxed mb-4">Your trusted partner for industrial, agricultural, and specialty chemical supply. Serving manufacturers, processors, and distributors across 50+ countries.</p>
             <p className="text-sm leading-relaxed">Poligon Industrial Mas Xirgu<br />Carrer Can Pau Birol, 101<br />17005 Girona, Spain</p>
@@ -38,12 +38,15 @@ export default function Footer() {
             <div className="space-y-2">
               <Link href="/about" className="block text-sm hover:text-blue-400 transition-colors">About Us</Link>
               <Link href="/industries" className="block text-sm hover:text-blue-400 transition-colors">Industries</Link>
+              <Link href="/products" className="block text-sm hover:text-blue-400 transition-colors">All Products</Link>
               <Link href="/contact" className="block text-sm hover:text-blue-400 transition-colors">Contact / Get a Quote</Link>
+              <Link href="/privacy" className="block text-sm hover:text-blue-400 transition-colors">Privacy Policy</Link>
+              <Link href="/terms" className="block text-sm hover:text-blue-400 transition-colors">Terms & Conditions</Link>
             </div>
           </div>
         </div>
         <div className="border-t border-slate-800 py-5 flex flex-wrap justify-between items-center gap-3 text-xs">
-          <span>&copy; 2026 Sociedade Teoflor Chemi. All rights reserved.</span>
+          <span>&copy; 2026 Sociedade Theoflor Chemi. All rights reserved.</span>
           <span>Committed to quality, safety, and global chemical supply excellence.</span>
         </div>
       </div>

@@ -72,9 +72,20 @@ const sections = [
   },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sociedadeteoflorchemi.com/" },
+    { "@type": "ListItem", position: 2, name: "Industries", item: "https://sociedadeteoflorchemi.com/industries/" },
+  ],
+};
+
 export default function IndustriesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       <section className="bg-gradient-to-br from-slate-900 to-slate-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <nav className="text-sm text-slate-400 mb-4">

@@ -4,14 +4,44 @@ import ContactForm from "./ContactForm";
 import { Mail, Phone, Clock, Truck, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Get a Quote",
-  description: "Request a quote for bulk chemical supply. Contact Sociedade Teoflor Chemi for pricing, product availability, and technical support. Response within 24 hours.",
+  title: "Contact & Get a Quote — Sociedade Theoflor Chemi",
+  description: "Request a quote for bulk chemical supply. Contact Sociedade Theoflor Chemi for pricing, product availability, and technical support. Response within 24 hours.",
   alternates: { canonical: "/contact" },
+};
+
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "Sociedade Theoflor Chemi",
+  description: "Trusted global supplier of industrial, agricultural, food-grade, mining, pharmaceutical, and specialty chemicals.",
+  url: "https://sociedadeteoflorchemi.com",
+  telephone: "+34631390443",
+  email: "sales@sociedadeteoflorchemi.com",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Poligon Industrial Mas Xirgu, Carrer Can Pau Birol, 101",
+    addressLocality: "Girona",
+    postalCode: "17005",
+    addressCountry: "ES",
+  },
+  openingHours: "Mo-Fr 08:00-18:00",
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sociedadeteoflorchemi.com/" },
+    { "@type": "ListItem", position: 2, name: "Contact", item: "https://sociedadeteoflorchemi.com/contact/" },
+  ],
 };
 
 export default function ContactPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       <section className="bg-gradient-to-br from-slate-900 to-slate-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <nav className="text-sm text-slate-400 mb-4">

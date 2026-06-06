@@ -4,7 +4,7 @@ import Link from "next/link";
 import CTABanner from "@/components/CTABanner";
 
 export const metadata: Metadata = {
-  title: "About Us — Trusted Chemical Supplier",
+  title: "About Sociedade Theoflor Chemi — Trusted Global Chemical Supplier",
   description: "Learn about Sociedade Theoflor Chemi — a global chemical distribution company delivering quality-assured industrial, agricultural, and specialty chemicals to 50+ countries.",
   alternates: { canonical: "/about" },
 };
@@ -18,9 +18,20 @@ const values = [
   { title: "Long-Term Partnerships", desc: "We believe in building relationships, not just processing orders. Many of our clients have been with us since day one." },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sociedadeteoflorchemi.com/" },
+    { "@type": "ListItem", position: 2, name: "About Us", item: "https://sociedadeteoflorchemi.com/about/" },
+  ],
+};
+
 export default function AboutPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+
       <section className="bg-gradient-to-br from-slate-900 to-slate-700 text-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <nav className="text-sm text-slate-400 mb-4">

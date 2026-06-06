@@ -64,6 +64,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
 
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-6">
+          <div className="prose prose-slate max-w-none mb-10">
+            <p className="text-slate-600">{cat.desc} Browse our full selection of {cat.name.toLowerCase()} below, all available for bulk purchase with worldwide delivery. Each product includes detailed specifications, CAS numbers, and available purity grades. <a href="/contact" className="text-blue-600 hover:underline font-medium">Request a quote</a> for competitive pricing on any product.</p>
+          </div>
           <p className="text-sm text-slate-500 mb-8">{catProducts.length} products</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {catProducts.map((p) => (
