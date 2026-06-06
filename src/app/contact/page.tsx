@@ -4,15 +4,15 @@ import ContactForm from "./ContactForm";
 import { Mail, Phone, Clock, Truck, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact & Get a Quote — Sociedade Theoflor Chemi",
-  description: "Request a quote for bulk chemical supply. Contact Sociedade Theoflor Chemi for pricing, product availability, and technical support. Response within 24 hours.",
+  title: "Contact & Get a Quote — Sociedade Teoflor Chemi",
+  description: "Request a quote for bulk chemical supply. Contact Sociedade Teoflor Chemi for pricing, product availability, and technical support. Response within 24 hours.",
   alternates: { canonical: "/contact" },
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Sociedade Theoflor Chemi",
+  name: "Sociedade Teoflor Chemi",
   description: "Trusted global supplier of industrial, agricultural, food-grade, mining, pharmaceutical, and specialty chemicals.",
   url: "https://sociedadeteoflorchemi.com",
   telephone: "+34631390443",

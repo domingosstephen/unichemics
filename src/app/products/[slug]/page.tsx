@@ -43,13 +43,13 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     description: product.desc,
     image: `https://sociedadeteoflorchemi.com${product.image}`,
     sku: product.cas,
-    brand: { "@type": "Brand", name: "Sociedade Theoflor Chemi" },
+    brand: { "@type": "Brand", name: "Sociedade Teoflor Chemi" },
     category: cat.name,
     offers: {
       "@type": "Offer",
       availability: "https://schema.org/InStock",
       priceCurrency: "USD",
-      seller: { "@type": "Organization", name: "Sociedade Theoflor Chemi" },
+      seller: { "@type": "Organization", name: "Sociedade Teoflor Chemi" },
     },
     additionalProperty: [
       { "@type": "PropertyValue", name: "CAS Number", value: product.cas },

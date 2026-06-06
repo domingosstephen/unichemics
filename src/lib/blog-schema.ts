@@ -1,7 +1,7 @@
 import type { BlogPost } from "@/types/blog";
 
 const SITE_URL = "https://sociedadeteoflorchemi.com";
-const SITE_NAME = "Sociedade Theoflor Chemi";
+const SITE_NAME = "Sociedade Teoflor Chemi";
 
 export function blogPostingSchema(post: BlogPost) {
   return {

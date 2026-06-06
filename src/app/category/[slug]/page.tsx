@@ -30,7 +30,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
   const schema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: `${cat.name} — Sociedade Theoflor Chemi`,
+    name: `${cat.name} — Sociedade Teoflor Chemi`,
     description: cat.desc,
     mainEntity: {
       "@type": "ItemList",

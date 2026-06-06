@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy policy for Sociedade Theoflor Chemi. Learn how we collect, use, and protect your personal information.",
+  description: "Privacy policy for Sociedade Teoflor Chemi. Learn how we collect, use, and protect your personal information.",
   alternates: { canonical: "/privacy" },
 };
 
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
 
           <h2>7. Contact</h2>
           <p>For questions about this privacy policy, contact us at:</p>
-          <p>Sociedade Theoflor Chemi<br />Poligon Industrial Mas Xirgu, Carrer Can Pau Birol, 101<br />17005 Girona, Spain<br />Email: <a href="mailto:sales@sociedadeteoflorchemi.com">sales@sociedadeteoflorchemi.com</a></p>
+          <p>Sociedade Teoflor Chemi<br />Poligon Industrial Mas Xirgu, Carrer Can Pau Birol, 101<br />17005 Girona, Spain<br />Email: <a href="mailto:sales@sociedadeteoflorchemi.com">sales@sociedadeteoflorchemi.com</a></p>
         </div>
       </section>
     </>

@@ -12,7 +12,7 @@ async function main() {
   const countFlag = args.find((a) => a.startsWith("--count="));
   const count = countFlag ? parseInt(countFlag.split("=")[1], 10) : 1;
 
-  console.log("=== Sociedade Theoflor Chemi Blog Engine ===\n");
+  console.log("=== Sociedade Teoflor Chemi Blog Engine ===\n");
 
   if (isStats) {
     const stats = getTopicStats();

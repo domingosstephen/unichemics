@@ -7,7 +7,7 @@ import type { TopicConfig } from "./config";
 
 const anthropic = new Anthropic();
 
-const RESEARCH_PROMPT = `You are a chemical industry content strategist. Your job is to discover new blog topic ideas for Sociedade Theoflor Chemi, an industrial chemical supplier.
+const RESEARCH_PROMPT = `You are a chemical industry content strategist. Your job is to discover new blog topic ideas for Sociedade Teoflor Chemi, an industrial chemical supplier.
 
 Analyze the existing topics below and suggest NEW topics that would:
 1. Fill content gaps in the chemical industry

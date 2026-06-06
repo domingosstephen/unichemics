@@ -20,7 +20,7 @@ export default function AllProductsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CollectionPage",
-            name: "All Products — Sociedade Theoflor Chemi",
+            name: "All Products — Sociedade Teoflor Chemi",
             description: "Complete catalog of industrial, agricultural, and specialty chemicals.",
             mainEntity: {
               "@type": "ItemList",

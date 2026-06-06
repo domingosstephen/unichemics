@@ -23,7 +23,7 @@ export default function Header() {
       {/* Main nav */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
         <Link href="/" className="text-lg sm:text-xl font-extrabold text-slate-900">
-          Sociedade <span className="text-blue-600">Theoflor</span> Chemi
+          Sociedade <span className="text-blue-600">Teoflor</span> Chemi
         </Link>
 
         {/* Desktop nav */}
