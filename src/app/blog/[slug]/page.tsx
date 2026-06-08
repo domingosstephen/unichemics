@@ -6,7 +6,9 @@ import { BLOG_CATEGORIES } from "@/types/blog";
 import CTABanner from "@/components/CTABanner";
 
 export async function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ slug }));
+  const slugs = getAllSlugs();
+  if (slugs.length === 0) return [{ slug: "_placeholder" }];
+  return slugs.map((slug) => ({ slug }));
 }
 
 export const dynamicParams = false;
