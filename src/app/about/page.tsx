@@ -52,10 +52,26 @@ export default function AboutPage() {
               <p className="text-slate-600 mb-4">Sociedade Teoflor Chemi was founded with a clear mission: make high-quality chemical sourcing simple, transparent, and reliable for businesses of every size. What started as a specialized supplier serving local manufacturers has grown into a comprehensive chemical distribution operation spanning multiple continents.</p>
               <p className="text-slate-600 mb-4">Today, we maintain direct relationships with certified manufacturers across Asia, Europe, and the Middle East — enabling us to offer competitive pricing on over 100 products without compromising on quality assurance or supply chain integrity.</p>
               <p className="text-slate-600">Our team combines deep chemical industry knowledge with modern supply chain management, providing clients with not just products, but genuine partnership in their procurement operations.</p>
+              <p className="text-xs text-slate-400 mt-4">Last updated: June 2026</p>
             </div>
             <div className="relative h-80 md:h-96 rounded-xl overflow-hidden">
               <Image src="/images/mining/activated-carbon.jpg" alt="Chemical supply operations" fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
+          </div>
+
+          {/* Key numbers */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 py-10 border-y border-gray-200">
+            {[
+              { value: '100+', label: 'Products Available' },
+              { value: '50+', label: 'Countries Served' },
+              { value: '10', label: 'Product Categories' },
+              { value: 'REACH', label: 'GHS & IMDG Compliant' },
+            ].map((s) => (
+              <div key={s.label} className="text-center">
+                <p className="text-3xl font-extrabold text-slate-900">{s.value}</p>
+                <p className="text-sm text-slate-500 mt-1">{s.label}</p>
+              </div>
+            ))}
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
