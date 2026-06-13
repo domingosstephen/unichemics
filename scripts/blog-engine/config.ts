@@ -100,7 +100,7 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
 ];
 
 export const GENERATION_CONFIG = {
-  articlesPerRun: 1,
+  articlesPerRun: 3,
   maxArticlesPerDay: 3,
   minWordCount: 1500,
   maxWordCount: 3000,

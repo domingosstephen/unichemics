@@ -42,6 +42,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             <div className="mt-6 flex items-center justify-center gap-3 text-sm text-slate-500">
               <span className="font-medium text-slate-900">{post.author.name}</span><span>|</span>
               <time dateTime={post.publishedAt}>{new Date(post.publishedAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</time>
+              <span>|</span><span>Updated: {new Date(post.updatedAt).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" })}</span>
               <span>|</span><span>{post.readingTime} min</span>
             </div>
           </header>

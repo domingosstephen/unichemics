@@ -96,9 +96,18 @@ export async function generateArticle(topic: TopicConfig): Promise<BlogPost> {
   const userPrompt = `Write a comprehensive blog article about: "${topic.title}"
 
 Category: ${topic.category}
-Target Keywords: ${topic.keywords.join(", ")}
+Primary keyword: "${topic.keywords[0]}"
+Secondary keywords: ${topic.keywords.slice(1).map((k) => `"${k}"`).join(", ")}
 Word Count: ${GENERATION_CONFIG.minWordCount}-${GENERATION_CONFIG.maxWordCount} words
 Target Audience: Chemical buyers, procurement managers, industrial engineers
+Write as: ${author.name}, ${author.title}
+
+AI query targets (questions this article should directly answer):
+- What is ${topic.keywords[0]}?
+- How is ${topic.keywords[0]} used in industry?
+- Where can I buy ${topic.keywords[0]} wholesale?
+
+Internal linking: mention Sociedade Teoflor Chemi products naturally and link to /products for the catalog, /contact for quotes, and relevant category pages like /category/industrial-chemicals, /category/agricultural-chemicals, /category/food-feed-additives, /category/water-treatment, /category/mining-chemicals. Use HTML anchor tags.
 
 Requirements:
 1. Create an in-depth, authoritative article with practical value
@@ -111,14 +120,26 @@ Requirements:
 
 Remember: Return ONLY valid JSON matching the specified structure.`;
 
-  const raw = await callAnthropic(SYSTEM_PROMPT, userPrompt);
+  let generated: Record<string, unknown> | undefined;
 
-  let jsonStr = raw.trim();
-  if (jsonStr.startsWith("```")) {
-    jsonStr = jsonStr.replace(/^```(?:json)?\n?/, "").replace(/\n?```$/, "");
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    const raw = await callAnthropic(SYSTEM_PROMPT, userPrompt);
+
+    let jsonStr = raw.trim();
+    if (jsonStr.startsWith("```")) {
+      jsonStr = jsonStr.replace(/^```(?:json)?\n?/, "").replace(/\n?```$/, "");
+    }
+
+    try {
+      generated = JSON.parse(jsonStr);
+      break;
+    } catch (err) {
+      if (attempt === 2) throw new Error(`Failed to parse JSON after 2 attempts: ${(err as Error).message}`);
+      console.log(`   ⚠️  JSON parse failed on attempt ${attempt}, retrying...`);
+    }
   }
 
-  const generated = JSON.parse(jsonStr);
+  if (!generated) throw new Error("No article generated");
   const now = new Date().toISOString();
 
   const post: BlogPost = {
