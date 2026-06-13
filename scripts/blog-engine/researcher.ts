@@ -1,11 +1,35 @@
-import Anthropic from "@anthropic-ai/sdk";
 import fs from "fs";
 import path from "path";
 import type { BlogCategory } from "../../types/blog";
 import { getAllTopics } from "./config";
 import type { TopicConfig } from "./config";
 
-const anthropic = new Anthropic();
+async function callAnthropic(userPrompt: string, maxTokens = 2048): Promise<string> {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) throw new Error("ANTHROPIC_API_KEY environment variable is not set.");
+
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": apiKey,
+      "anthropic-version": "2023-06-01",
+    },
+    body: JSON.stringify({
+      model: "claude-sonnet-4-20250514",
+      max_tokens: maxTokens,
+      messages: [{ role: "user", content: userPrompt }],
+    }),
+  });
+
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`Anthropic API error ${res.status}: ${err}`);
+  }
+
+  const data = await res.json();
+  return data.content[0].text;
+}
 
 const RESEARCH_PROMPT = `You are a chemical industry content strategist. Your job is to discover new blog topic ideas for Sociedade Teoflor Chemi, an industrial chemical supplier.
 
@@ -41,18 +65,9 @@ export async function discoverTopics(): Promise<ResearchResult[]> {
   const topicList = existingTopics.map((t) => `- [${t.category}] ${t.title}`).join("\n");
   const prompt = RESEARCH_PROMPT.replace("{EXISTING_TOPICS}", topicList);
 
-  const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-20250514",
-    max_tokens: 2048,
-    messages: [{ role: "user", content: prompt }],
-  });
+  const raw = await callAnthropic(prompt);
 
-  const textBlock = response.content.find((block) => block.type === "text");
-  if (!textBlock || textBlock.type !== "text") {
-    throw new Error("No text response from AI");
-  }
-
-  let jsonStr = textBlock.text.trim();
+  let jsonStr = raw.trim();
   if (jsonStr.startsWith("```")) {
     jsonStr = jsonStr.replace(/^```(?:json)?\n?/, "").replace(/\n?```$/, "");
   }

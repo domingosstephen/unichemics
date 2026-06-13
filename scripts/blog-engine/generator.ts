@@ -1,9 +1,34 @@
-import Anthropic from "@anthropic-ai/sdk";
 import type { BlogPost, BlogCategory } from "../../types/blog";
 import { getRandomAuthor, GENERATION_CONFIG } from "./config";
 import type { TopicConfig } from "./config";
 
-const anthropic = new Anthropic();
+async function callAnthropic(systemPrompt: string, userPrompt: string, maxTokens = 4096): Promise<string> {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) throw new Error("ANTHROPIC_API_KEY environment variable is not set.");
+
+  const res = await fetch("https://api.anthropic.com/v1/messages", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-api-key": apiKey,
+      "anthropic-version": "2023-06-01",
+    },
+    body: JSON.stringify({
+      model: "claude-sonnet-4-20250514",
+      max_tokens: maxTokens,
+      system: systemPrompt,
+      messages: [{ role: "user", content: userPrompt }],
+    }),
+  });
+
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`Anthropic API error ${res.status}: ${err}`);
+  }
+
+  const data = await res.json();
+  return data.content[0].text;
+}
 
 function slugify(text: string): string {
   return text
@@ -86,19 +111,9 @@ Requirements:
 
 Remember: Return ONLY valid JSON matching the specified structure.`;
 
-  const response = await anthropic.messages.create({
-    model: "claude-sonnet-4-20250514",
-    max_tokens: 4096,
-    messages: [{ role: "user", content: userPrompt }],
-    system: SYSTEM_PROMPT,
-  });
+  const raw = await callAnthropic(SYSTEM_PROMPT, userPrompt);
 
-  const textBlock = response.content.find((block) => block.type === "text");
-  if (!textBlock || textBlock.type !== "text") {
-    throw new Error("No text response from AI");
-  }
-
-  let jsonStr = textBlock.text.trim();
+  let jsonStr = raw.trim();
   if (jsonStr.startsWith("```")) {
     jsonStr = jsonStr.replace(/^```(?:json)?\n?/, "").replace(/\n?```$/, "");
   }
