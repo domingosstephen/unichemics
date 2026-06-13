@@ -46,11 +46,11 @@ export default function PrivacyPage() {
           <p>Our website may use cookies and similar tracking technologies to enhance your browsing experience and analyze website traffic. You can control cookie settings through your browser preferences.</p>
 
           <h2>6. Your Rights</h2>
-          <p>You have the right to access, correct, or delete your personal information. To exercise these rights, contact us at <a href="mailto:sales@sociedadeteoflorchemi.com">sales@sociedadeteoflorchemi.com</a>.</p>
+          <p>You have the right to access, correct, or delete your personal information. To exercise these rights, contact us at <a href="mailto:contact@sociedadeteoflorchemi.com">contact@sociedadeteoflorchemi.com</a>.</p>
 
           <h2>7. Contact</h2>
           <p>For questions about this privacy policy, contact us at:</p>
-          <p>Sociedade Teoflor Chemi<br />Poligon Industrial Mas Xirgu, Carrer Can Pau Birol, 101<br />17005 Girona, Spain<br />Email: <a href="mailto:sales@sociedadeteoflorchemi.com">sales@sociedadeteoflorchemi.com</a></p>
+          <p>Sociedade Teoflor Chemi<br />Poligon Industrial Mas Xirgu, Carrer Can Pau Birol, 101<br />17005 Girona, Spain<br />Email: <a href="mailto:contact@sociedadeteoflorchemi.com">contact@sociedadeteoflorchemi.com</a></p>
         </div>
       </section>
     </>

@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 
+const WEB3FORMS_KEY = "YOUR_ACCESS_KEY_HERE";
+
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -20,28 +22,42 @@ export default function ContactForm() {
 
   return (
     <form
-      action="https://formspree.io/f/sales@sociedadeteoflorchemi.com"
-      method="POST"
       onSubmit={async (e) => {
         e.preventDefault();
         setSubmitting(true);
         const form = e.currentTarget;
         const data = new FormData(form);
         try {
-          const res = await fetch(form.action, {
+          const res = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
-            body: data,
-            headers: { Accept: "application/json" },
+            body: JSON.stringify({
+              access_key: WEB3FORMS_KEY,
+              subject: `Quote Request — ${data.get("products")}`,
+              from_name: data.get("name"),
+              name: data.get("name"),
+              company: data.get("company"),
+              email: data.get("email"),
+              phone: data.get("phone"),
+              country: data.get("country"),
+              products: data.get("products"),
+              quantity: data.get("quantity"),
+              grade: data.get("grade"),
+              details: data.get("details"),
+            }),
+            headers: {
+              "Content-Type": "application/json",
+              Accept: "application/json",
+            },
           });
           if (res.ok) {
             setSubmitted(true);
           } else {
-            window.location.href = `mailto:sales@sociedadeteoflorchemi.com?subject=Quote Request&body=${encodeURIComponent(
+            window.location.href = `mailto:contact@sociedadeteoflorchemi.com?subject=Quote Request&body=${encodeURIComponent(
               `Name: ${data.get("name")}\nCompany: ${data.get("company")}\nEmail: ${data.get("email")}\nPhone: ${data.get("phone")}\nCountry: ${data.get("country")}\nProducts: ${data.get("products")}\nQuantity: ${data.get("quantity")}\nGrade: ${data.get("grade")}\nDetails: ${data.get("details")}`
             )}`;
           }
         } catch {
-          window.location.href = `mailto:sales@sociedadeteoflorchemi.com?subject=Quote Request&body=${encodeURIComponent(
+          window.location.href = `mailto:contact@sociedadeteoflorchemi.com?subject=Quote Request&body=${encodeURIComponent(
             `Name: ${data.get("name")}\nCompany: ${data.get("company")}\nEmail: ${data.get("email")}\nPhone: ${data.get("phone")}\nCountry: ${data.get("country")}\nProducts: ${data.get("products")}\nQuantity: ${data.get("quantity")}\nGrade: ${data.get("grade")}\nDetails: ${data.get("details")}`
           )}`;
         } finally {

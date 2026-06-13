@@ -48,7 +48,7 @@ export default function TermsPage() {
           <p>These terms are governed by the laws of Spain. Any disputes shall be resolved through arbitration in Girona, Spain.</p>
 
           <h2>9. Contact</h2>
-          <p>For questions about these terms, contact us at <a href="mailto:sales@sociedadeteoflorchemi.com">sales@sociedadeteoflorchemi.com</a>.</p>
+          <p>For questions about these terms, contact us at <a href="mailto:contact@sociedadeteoflorchemi.com">contact@sociedadeteoflorchemi.com</a>.</p>
         </div>
       </section>
     </>

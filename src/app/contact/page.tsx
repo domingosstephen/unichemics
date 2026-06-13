@@ -16,7 +16,7 @@ const localBusinessSchema = {
   description: "Trusted global supplier of industrial, agricultural, food-grade, mining, pharmaceutical, and specialty chemicals.",
   url: "https://sociedadeteoflorchemi.com",
   telephone: "+34631390443",
-  email: "sales@sociedadeteoflorchemi.com",
+  email: "contact@sociedadeteoflorchemi.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Poligon Industrial Mas Xirgu, Carrer Can Pau Birol, 101",
@@ -68,7 +68,7 @@ export default function ContactPage() {
                   <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center shrink-0"><Mail className="w-5 h-5 text-blue-600" /></div>
                   <div>
                     <h4 className="font-bold text-sm">Email</h4>
-                    <a href="mailto:sales@sociedadeteoflorchemi.com" className="text-sm text-blue-600 hover:underline">sales@sociedadeteoflorchemi.com</a>
+                    <a href="mailto:contact@sociedadeteoflorchemi.com" className="text-sm text-blue-600 hover:underline">contact@sociedadeteoflorchemi.com</a>
                   </div>
                 </li>
                 <li className="flex gap-4">
