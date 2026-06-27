@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { products, categories } from "@/lib/data";
 import { getAllPosts } from "@/lib/blog";
 
+export const dynamic = "force-static";
+
 const BASE = "https://sociedadeteoflorchemi.com";
 const LAST_UPDATED = "2026-06-27";
 
