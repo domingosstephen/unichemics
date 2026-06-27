@@ -13,13 +13,60 @@ export const metadata: Metadata = {
     default: "Industrial & Specialty Chemical Supplier | Sociedade Teoflor Chemi",
   },
   description: "Trusted global supplier of 100+ industrial, agricultural, food-grade, mining, and specialty chemicals. Request a quote for bulk chemical supply with worldwide delivery.",
-  keywords: ["chemical supplier", "industrial chemicals", "agricultural chemicals", "food additives", "mining chemicals", "water treatment", "bulk chemicals"],
+  keywords: [
+    "chemical supplier",
+    "industrial chemicals",
+    "agricultural chemicals",
+    "food additives",
+    "mining chemicals",
+    "water treatment chemicals",
+    "bulk chemicals",
+    "specialty chemicals",
+    "pharmaceutical chemicals",
+    "chemical distributor",
+    "buy chemicals bulk",
+    "industrial chemical supplier",
+    "chemical export",
+    "Sociedade Teoflor Chemi",
+  ],
+  authors: [{ name: "Sociedade Teoflor Chemi", url: "https://sociedadeteoflorchemi.com" }],
+  creator: "Sociedade Teoflor Chemi",
+  publisher: "Sociedade Teoflor Chemi",
+  category: "chemicals",
   openGraph: {
     type: "website",
     siteName: "Sociedade Teoflor Chemi",
+    url: "https://sociedadeteoflorchemi.com",
+    images: [
+      {
+        url: "https://sociedadeteoflorchemi.com/images/industrial/hydrochloric-acid.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Sociedade Teoflor Chemi — Industrial Chemical Supplier",
+      },
+    ],
   },
-  robots: { index: true, follow: true },
-  alternates: { canonical: "/" },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industrial & Specialty Chemical Supplier | Sociedade Teoflor Chemi",
+    description: "Trusted global supplier of 100+ industrial, agricultural, food-grade, mining, and specialty chemicals. Worldwide delivery.",
+    images: ["https://sociedadeteoflorchemi.com/images/industrial/hydrochloric-acid.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: { canonical: "https://sociedadeteoflorchemi.com" },
+  verification: {
+    google: "google4eb14543200fea69",
+  },
 };
 
 export default function RootLayout({

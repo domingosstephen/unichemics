@@ -16,10 +16,27 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const product = getProductBySlug(slug);
   if (!product) return {};
+  const imageUrl = `https://sociedadeteoflorchemi.com${product.image}`;
+  const title = `${product.name} Supplier — CAS ${product.cas} | Buy ${product.name}`;
+  const description = `Buy ${product.name} (CAS ${product.cas}, ${product.formula}) from a trusted supplier. Purity: ${product.purity}. Used in ${product.apps.slice(0, 3).join(", ")}. Request bulk pricing with worldwide delivery.`;
   return {
-    title: `${product.name} Supplier — CAS ${product.cas} | Buy ${product.name}`,
-    description: `Buy ${product.name} (CAS ${product.cas}, ${product.formula}) from a trusted supplier. Purity: ${product.purity}. Used in ${product.apps.slice(0, 3).join(", ")}. Request bulk pricing with worldwide delivery.`,
-    alternates: { canonical: `/products/${slug}` },
+    title,
+    description,
+    alternates: { canonical: `https://sociedadeteoflorchemi.com/products/${slug}/` },
+    openGraph: {
+      title,
+      description,
+      url: `https://sociedadeteoflorchemi.com/products/${slug}/`,
+      siteName: "Sociedade Teoflor Chemi",
+      images: [{ url: imageUrl, width: 800, height: 600, alt: `${product.name} — CAS ${product.cas}` }],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [imageUrl],
+    },
   };
 }
 

@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /api/
 
 User-agent: GPTBot
 Allow: /
@@ -14,6 +15,9 @@ User-agent: ClaudeBot
 Allow: /
 
 User-agent: Applebot
+Allow: /
+
+User-agent: Bytespider
 Allow: /
 
 Sitemap: https://sociedadeteoflorchemi.com/sitemap.xml

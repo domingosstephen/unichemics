@@ -46,8 +46,89 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
+            "@id": "https://sociedadeteoflorchemi.com/#organization",
             name: "Sociedade Teoflor Chemi",
-            description: "Trusted global supplier of industrial, agricultural, food-grade, mining, pharmaceutical, and specialty chemicals.",
+            url: "https://sociedadeteoflorchemi.com",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://sociedadeteoflorchemi.com/images/industrial/hydrochloric-acid.jpg",
+              width: 1200,
+              height: 630,
+            },
+            description: "Trusted global supplier of 100+ industrial, agricultural, food-grade, mining, pharmaceutical, and specialty chemicals. Distribution hubs across Europe, Africa, and the Americas. REACH, GHS, IMDG, and ADR compliant.",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Girona",
+              addressRegion: "Catalonia",
+              addressCountry: "ES",
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "sales",
+              email: "contact@sociedadeteoflorchemi.com",
+              availableLanguage: ["English", "Spanish"],
+            },
+            areaServed: [
+              { "@type": "Continent", name: "Europe" },
+              { "@type": "Continent", name: "Africa" },
+              { "@type": "Continent", name: "North America" },
+              { "@type": "Continent", name: "South America" },
+              { "@type": "Continent", name: "Asia" },
+            ],
+            knowsAbout: ["Industrial Chemicals", "Agricultural Chemicals", "Food Additives", "Mining Chemicals", "Water Treatment", "Pharmaceutical Chemicals"],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": "https://sociedadeteoflorchemi.com/#website",
+            name: "Sociedade Teoflor Chemi",
+            url: "https://sociedadeteoflorchemi.com",
+            description: "Trusted global supplier of 100+ industrial, agricultural, food-grade, mining, and specialty chemicals with worldwide delivery.",
+            inLanguage: "en",
+            publisher: { "@id": "https://sociedadeteoflorchemi.com/#organization" },
+            potentialAction: {
+              "@type": "SearchAction",
+              target: {
+                "@type": "EntryPoint",
+                urlTemplate: "https://sociedadeteoflorchemi.com/products?q={search_term_string}",
+              },
+              "query-input": "required name=search_term_string",
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: "How to Order Bulk Chemicals from Sociedade Teoflor Chemi",
+            description: "Step-by-step guide to sourcing industrial, agricultural, or specialty chemicals in bulk quantities with worldwide delivery.",
+            step: [
+              { "@type": "HowToStep", position: 1, name: "Browse the Product Catalog", text: "Explore 100+ chemicals across 10 categories including industrial, agricultural, food-grade, mining, pharmaceutical, and specialty chemicals.", url: "https://sociedadeteoflorchemi.com/products" },
+              { "@type": "HowToStep", position: 2, name: "Request a Quote", text: "Contact our sales team with your product name, CAS number, required quantity, purity grade, and destination. Responses within 24 hours.", url: "https://sociedadeteoflorchemi.com/contact" },
+              { "@type": "HowToStep", position: 3, name: "Review Documentation", text: "We provide Certificates of Analysis (CoA), Safety Data Sheets (SDS), IMDG compliance documentation, and packing lists for every order." },
+              { "@type": "HowToStep", position: 4, name: "Confirm and Ship", text: "Orders ship via FCL or LCL from distribution hubs in Europe, Africa, and the Americas. We handle all customs and hazardous goods compliance." },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: ["h1", "[data-speakable]"],
+            },
             url: "https://sociedadeteoflorchemi.com",
           }),
         }}

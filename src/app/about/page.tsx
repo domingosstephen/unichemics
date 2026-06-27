@@ -6,7 +6,7 @@ import CTABanner from "@/components/CTABanner";
 export const metadata: Metadata = {
   title: "About Sociedade Teoflor Chemi — Trusted Global Chemical Supplier",
   description: "Learn about Sociedade Teoflor Chemi — a global chemical distribution company delivering quality-assured industrial, agricultural, and specialty chemicals to 50+ countries.",
-  alternates: { canonical: "/about" },
+  alternates: { canonical: "https://sociedadeteoflorchemi.com/about/" },
 };
 
 const values = [
