@@ -63,7 +63,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: { canonical: "https://sociedadeteoflorchemi.com" },
+  alternates: { canonical: "https://sociedadeteoflorchemi.com/" },
   verification: {
     google: "google4eb14543200fea69",
   },

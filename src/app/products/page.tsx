@@ -8,7 +8,7 @@ import SearchBar from "@/components/SearchBar";
 export const metadata: Metadata = {
   title: "All Products — Complete Chemical Catalog",
   description: "Browse our complete catalog of 100+ industrial, agricultural, food-grade, mining, pharmaceutical, and specialty chemicals. Search by name, CAS number, or application.",
-  alternates: { canonical: "/products" },
+  alternates: { canonical: "/products/" },
 };
 
 export default function AllProductsPage() {

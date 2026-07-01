@@ -6,7 +6,7 @@ import { Mail, Phone, Clock, Truck, MapPin } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact & Get a Quote — Sociedade Teoflor Chemi",
   description: "Request a quote for bulk chemical supply. Contact Sociedade Teoflor Chemi for pricing, product availability, and technical support. Response within 24 hours.",
-  alternates: { canonical: "/contact" },
+  alternates: { canonical: "/contact/" },
 };
 
 const localBusinessSchema = {

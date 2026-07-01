@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${cat.name} Supplier — Buy ${cat.name}`,
     description: `Buy ${cat.name.toLowerCase()} from a trusted global supplier. ${catProducts.length} products available including ${catProducts.slice(0, 3).map((p) => p.name).join(", ")}. Request bulk pricing today.`,
-    alternates: { canonical: `/category/${slug}` },
+    alternates: { canonical: `/category/${slug}/` },
   };
 }
 

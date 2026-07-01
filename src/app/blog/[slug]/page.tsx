@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return {};
-  return { title: post.seoTitle, description: post.seoDescription, alternates: { canonical: `/blog/${post.slug}` } };
+  return { title: post.seoTitle, description: post.seoDescription, alternates: { canonical: `/blog/${post.slug}/` } };
 }
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {

@@ -5,7 +5,7 @@ import CTABanner from "@/components/CTABanner";
 export const metadata: Metadata = {
   title: "Chemical Industry Blog | Sociedade Teoflor Chemi",
   description: "Expert guides on industrial chemicals, safety handling, market trends, and chemical procurement.",
-  alternates: { canonical: "/blog" },
+  alternates: { canonical: "/blog/" },
 };
 
 export default function BlogPage() {

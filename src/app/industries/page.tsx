@@ -6,7 +6,7 @@ import CTABanner from "@/components/CTABanner";
 export const metadata: Metadata = {
   title: "Industries We Serve — Chemical Solutions by Sector",
   description: "Chemical supply solutions for agriculture, food & beverage, mining, water treatment, pharmaceutical, and manufacturing industries. Explore products by industry.",
-  alternates: { canonical: "/industries" },
+  alternates: { canonical: "/industries/" },
 };
 
 const sections = [
