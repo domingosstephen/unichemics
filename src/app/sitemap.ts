@@ -5,7 +5,7 @@ import { getAllPosts } from "@/lib/blog";
 export const dynamic = "force-static";
 
 const BASE = "https://sociedadeteoflorchemi.com";
-const LAST_UPDATED = "2026-06-27";
+const LAST_UPDATED = "2026-07-14";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
@@ -15,8 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/industries/`, lastModified: LAST_UPDATED, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/products/`, lastModified: LAST_UPDATED, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/blog/`, lastModified: LAST_UPDATED, changeFrequency: "weekly", priority: 0.8 },
-    { url: `${BASE}/privacy/`, lastModified: "2026-05-01", changeFrequency: "yearly", priority: 0.3 },
-    { url: `${BASE}/terms/`, lastModified: "2026-05-01", changeFrequency: "yearly", priority: 0.3 },
+    // privacy and terms are noindex — excluded from sitemap
   ];
 
   const categoryPages: MetadataRoute.Sitemap = categories.map((cat) => ({

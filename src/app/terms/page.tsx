@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Terms & Conditions",
   description: "Terms and conditions for Sociedade Teoflor Chemi. Read our terms of use, ordering policies, and shipping conditions.",
   alternates: { canonical: "/terms/" },
+  robots: { index: false, follow: false },
 };
 
 export default function TermsPage() {

@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy policy for Sociedade Teoflor Chemi. Learn how we collect, use, and protect your personal information.",
   alternates: { canonical: "/privacy/" },
+  robots: { index: false, follow: false },
 };
 
 export default function PrivacyPage() {
